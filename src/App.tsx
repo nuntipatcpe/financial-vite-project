@@ -5,7 +5,7 @@ import Footer from "./components/layouts/Footer";
 import Header from "./components/layouts/Header";
 
 function App() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
     console.log("handleOpen");

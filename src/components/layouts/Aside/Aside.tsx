@@ -7,8 +7,8 @@ type AsideProps = {
 };
 
 const Aside: React.FC<any> = ({ open, handleClose }: AsideProps) => {
-  const [toggle, setToggle] = React.useState(open);
-  // const [open, setOpen] = React.useState(open);
+  // const [toggle, setToggle] = React.useState(open);
+  const [active, setActive] = React.useState("");
 
   const hendleOpen = () => {
     handleClose();
@@ -22,7 +22,18 @@ const Aside: React.FC<any> = ({ open, handleClose }: AsideProps) => {
       </div>
       <ul>
         <h3>Market</h3>
-        <li>Futures</li>
+        <li
+          className={active === "Futures" ? "actice" : ""}
+          onClick={() => setActive("Futures")}
+        >
+          Futures
+        </li>
+        <li
+          className={active === "Forex" ? "actice" : ""}
+          onClick={() => setActive("Forex")}
+        >
+          Futures
+        </li>
         <li>Forex</li>
       </ul>
       <ul>
