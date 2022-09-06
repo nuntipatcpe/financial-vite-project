@@ -1,0 +1,28 @@
+@use "../utils" as color;
+.heard {
+  height: 50px;
+  width: 100%;
+  color: color.$color-2;
+  background-color: color.$color-4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+
+  position: relative;
+  img {
+    position: absolute;
+    left: 1rem;
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+  // transition: 1s ease;
+}
+.heard.hide {
+  // z-index: 1000;
+  // width: 100vw;
+  // transform: translateX(-100%);
+}

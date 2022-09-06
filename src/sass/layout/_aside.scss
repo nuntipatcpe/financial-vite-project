@@ -1,0 +1,52 @@
+@use "../utils" as color;
+.aside {
+  height: 100vh;
+  width: 300px;
+  background-color: color.$color-4;
+  position: sticky;
+  top: 0;
+  color: color.$color-2;
+
+  .logo {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    img {
+      position: absolute;
+      right: 1rem;
+      cursor: pointer;
+    }
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    h3 {
+      margin-left: 0.5rem;
+    }
+    li {
+      margin: 5px 10px;
+      padding: 1rem;
+      padding-left: 3rem;
+      background-color: color.$color-4;
+      border-radius: 5px;
+      list-style-type: none;
+    }
+    border-bottom: 1px solid color.$color-2;
+  }
+  transition: 300ms ease;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.aside.hide {
+  transition: 300ms ease;
+  opacity: 0;
+  position: fixed;
+  transform: translateX(-100%);
+}

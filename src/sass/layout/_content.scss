@@ -1,0 +1,8 @@
+@use "../utils/" as color;
+.content {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: color.$color-2;
+}
