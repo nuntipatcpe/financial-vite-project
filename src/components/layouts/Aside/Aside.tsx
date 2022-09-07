@@ -32,24 +32,8 @@ const Aside: React.FC<any> = ({ open, handleClose }: AsideProps) => {
           className={active === "Forex" ? "actice" : ""}
           onClick={() => setActive("Forex")}
         >
-          Futures
+          Forex
         </li>
-        <li>Forex</li>
-      </ul>
-      <ul>
-        <h3>Market</h3>
-        <li>dasdasd</li>
-        <li>asdasd</li>
-      </ul>
-      <ul>
-        <h3>Market</h3>
-        <li>dasdasd</li>
-        <li>asdasd</li>
-      </ul>
-      <ul>
-        <h3>Market</h3>
-        <li>dasdasd</li>
-        <li>asdasd</li>
       </ul>
     </div>
   );

@@ -7,10 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
   top: 0;
-
-  position: relative;
+  // position: relative;
+  position: fixed;
   img {
     position: absolute;
     left: 1rem;

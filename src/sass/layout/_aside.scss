@@ -43,8 +43,10 @@
     }
     border-bottom: 1px solid color.$color-2;
   }
+  // transform: translateX(0%);
   transition: 300ms ease;
-  transform: translateX(0%);
+  position: fixed;
+  z-index: 1000;
   opacity: 1;
 }
 
