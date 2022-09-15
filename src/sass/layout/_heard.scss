@@ -1,7 +1,7 @@
 @use "../utils" as color;
 .heard {
   height: 50px;
-  // width: 100vw;
+  width: calc(100vw - 10px);
   color: color.$color-2;
   background-color: color.$color-4;
   display: flex;

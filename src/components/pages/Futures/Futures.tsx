@@ -83,10 +83,11 @@ const Futures: React.FC<any> = () => {
     };
   }
   function onChangeNumberFormath(e: string, value: string) {
-    let numb = e.replaceAll(",", "");
+    let numb: string = e.replaceAll(",", "");
+    let numbLastIndex: number = numb.length - 1;
     if (
-      numb.charAt(numb.length - 1) === "." ||
-      numb.charAt(numb.length - 1) === "0"
+      numb.charAt(numbLastIndex) === "." ||
+      numb.charAt(numbLastIndex) === "0"
     ) {
       updateInput(value, comma(numb));
     } else {

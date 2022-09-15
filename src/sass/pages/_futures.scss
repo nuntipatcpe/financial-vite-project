@@ -1,11 +1,10 @@
+@use "../utils/mixin";
 .futures {
-  //   background-color: aqua;
   width: 500px;
   display: flex;
   flex-direction: column;
   .title {
     width: 100%;
-    // background: #000;
     justify-content: left;
     font-size: 2rem;
     font-weight: bold;
@@ -13,9 +12,8 @@
     padding: 5px 0;
   }
   form {
+    @include mixin.gird-col-3-no1(100px, 1fr, 100px);
     width: 100%;
-    display: grid;
-    grid-template-columns: 100px 1fr 100px;
     gap: 20px;
     padding: 1rem 0;
     input {
@@ -29,7 +27,6 @@
   }
 
   .slider-con {
-    // width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,17 +42,14 @@
     align-items: center;
   }
   .container-winrate {
+    @include mixin.gird-col-3-no1(1.25rem, 1fr, 1.25rem);
     margin: 0 auto;
     width: 200px;
-    display: grid;
-    gap: px;
-    grid-template-columns: 20px 1fr 20px;
   }
   .card {
+    @include mixin.gird-col-3-no1(6.25rem, 1fr, 6.25rem);
     margin: 1rem;
     padding: 1rem 2rem;
-    display: grid;
-    grid-template-columns: 100px 1fr 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     gap: 1rem;
     span {
@@ -69,9 +63,38 @@
     margin: 0.5rem 1rem;
     justify-content: space-between;
     .card {
-      grid-template-columns: 50px 1fr 50px;
+      @include mixin.gird-col-3-no1(3rem, 1fr, 3rem);
       margin: 0rem;
       width: calc(140px + 1rem);
+    }
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .futures {
+    width: calc(100vw - 10px);
+    // padding-left: 2rem;
+
+    .profit-Loss {
+      font-size: 10px;
+      margin: 0.5rem 1.5rem;
+      .card {
+        @include mixin.gird-col-3-no1(3rem, 1fr, 3rem);
+        margin: 0rem;
+        width: calc(85px + 1rem);
+      }
+    }
+    .card {
+      @include mixin.gird-col-3-no1(6.25rem, 1fr, 6.25rem);
+      margin: 1rem;
+      padding: 0.5rem 2rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      // gap: 1rem;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }

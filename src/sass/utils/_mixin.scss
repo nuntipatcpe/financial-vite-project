@@ -1,0 +1,4 @@
+@mixin gird-col-3-no1($color-1, $color-2, $color-3) {
+  display: grid;
+  grid-template-columns: $color-1 $color-2 $color-3;
+}
