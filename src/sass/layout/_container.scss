@@ -1,7 +1,16 @@
 .container {
   display: flex;
-  width: 100%;
+  width: calc(100vw - 310px);
+  height: 100%;
   flex-direction: column;
-  //   flex-grow: 3;
-  background: #ddd;
+  position: absolute;
+  left: 300px;
+  transition: 300ms ease;
+}
+
+.container.open {
+  width: calc(100vw - 10px);
+  transition: 300ms ease;
+  position: absolute;
+  left: 0;
 }

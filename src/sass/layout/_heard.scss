@@ -1,19 +1,21 @@
 @use "../utils" as color;
 .heard {
   height: 50px;
-  width: 100%;
+  width: 100vw;
   color: color.$color-2;
   background-color: color.$color-4;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
   // position: relative;
   position: fixed;
+  margin-left: 0px;
+  top: 0;
   img {
     position: absolute;
     left: 1rem;
     display: none;
+    width: 20px;
   }
   .active {
     display: block;

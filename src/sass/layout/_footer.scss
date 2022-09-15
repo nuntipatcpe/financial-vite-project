@@ -2,7 +2,8 @@
 .footer {
   background-color: color.$color-4;
   color: color.$color-2;
-  height: 50px;
+  min-height: 50px;
+
   display: flex;
   justify-content: center;
   align-items: center;
