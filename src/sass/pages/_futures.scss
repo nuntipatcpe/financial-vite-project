@@ -27,10 +27,18 @@
     display: flex;
     justify-content: space-between;
   }
-  .slider {
+
+  .slider-con {
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 0.5rem;
-    width: 100%;
+    .slider {
+      width: 70%;
+    }
   }
+
   .risk-reward-ratio {
     display: flex;
     justify-content: space-between;
