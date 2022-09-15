@@ -1,0 +1,69 @@
+.futures {
+  //   background-color: aqua;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    width: 100%;
+    // background: #000;
+    justify-content: left;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 1px #000 solid;
+    padding: 5px 0;
+  }
+  form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    gap: 20px;
+    padding: 1rem 0;
+    input {
+      text-align: center;
+    }
+    border-bottom: 1px #000 solid;
+  }
+  .cal-round {
+    display: flex;
+    justify-content: space-between;
+  }
+  .slider {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .risk-reward-ratio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container-winrate {
+    margin: 0 auto;
+    width: 200px;
+    display: grid;
+    gap: px;
+    grid-template-columns: 20px 1fr 20px;
+  }
+  .card {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    gap: 1rem;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .profit-Loss {
+    display: flex;
+    margin: 0.5rem 1rem;
+    justify-content: space-between;
+    .card {
+      grid-template-columns: 50px 1fr 50px;
+      margin: 0rem;
+      width: calc(140px + 1rem);
+    }
+  }
+}
