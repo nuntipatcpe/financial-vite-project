@@ -1,6 +1,7 @@
 import * as React from "react";
 import Menu from "../../../../public/menu.svg";
 
+import { Link, NavLink } from "react-router-dom";
 type AsideProps = {
   open: boolean;
   handleClose: () => void;
@@ -22,18 +23,20 @@ const Aside: React.FC<any> = ({ open, handleClose }: AsideProps) => {
       </div>
       <ul>
         <h3>Market</h3>
-        <li
-          className={active === "Futures" ? "actice" : ""}
+        <NavLink
+          to="/futures"
+          className={active === "Futures" ? "link-menu actice" : "link-menu"}
           onClick={() => setActive("Futures")}
         >
           Futures
-        </li>
-        <li
-          className={active === "Forex" ? "actice" : ""}
+        </NavLink>
+        <NavLink
+          to="/forex"
+          className={active === "Forex" ? "link-menu actice" : "link-menu"}
           onClick={() => setActive("Forex")}
         >
           Forex
-        </li>
+        </NavLink>
       </ul>
     </div>
   );

@@ -1,7 +1,7 @@
 @use "../utils" as color;
 .heard {
   height: 50px;
-  width: 100vw;
+  // width: 100vw;
   color: color.$color-2;
   background-color: color.$color-4;
   display: flex;
@@ -9,8 +9,11 @@
   align-items: center;
   // position: relative;
   position: fixed;
+
   margin-left: 0px;
   top: 0;
+  left: 0;
+  right: 10px;
   img {
     position: absolute;
     left: 1rem;

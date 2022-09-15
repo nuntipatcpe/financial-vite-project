@@ -29,13 +29,15 @@
     h3 {
       margin-left: 0.5rem;
     }
-    li {
+    .link-menu {
       margin: 5px 10px;
       padding: 1rem;
       padding-left: 3rem;
       border-radius: 5px;
+      color: color.$color-2;
       list-style-type: none;
-      cursor: pointer;
+      // // text-decoration: none;
+      // cursor: pointer;
     }
     .actice {
       background-color: color.$color-2;
