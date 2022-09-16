@@ -28,11 +28,13 @@ function App() {
         <Header open={open} handleOpen={handleOpen} />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Navigate to="/futures" />} />
+            <Route path="/">
+              <Route path="/" element={<Navigate to="/futures" />} />
+              <Route path="/futures" element={<Futures />} />
+              <Route path="/forex" element={<Forex />} />
+              <Route path="*" element={<>404</>} />
+            </Route>
             {/* <Route path="/" element={<Futures />} /> */}
-            <Route path="/futures" element={<Futures />} />
-            <Route path="/forex" element={<Forex />} />
-            <Route path="*" element={<>404</>} />
           </Routes>
         </div>
         <Footer />
