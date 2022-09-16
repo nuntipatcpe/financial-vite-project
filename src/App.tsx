@@ -31,6 +31,7 @@ function App() {
             <Route path="/" element={<Navigate to="/futures" />} />
             <Route path="/futures" element={<Futures />} />
             <Route path="/forex" element={<Forex />} />
+            <Route path="*" element={<>404</>} />
           </Routes>
         </div>
         <Footer />
