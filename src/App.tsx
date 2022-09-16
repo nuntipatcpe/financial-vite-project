@@ -29,6 +29,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Navigate to="/futures" />} />
+            {/* <Route path="/" element={<Futures />} /> */}
             <Route path="/futures" element={<Futures />} />
             <Route path="/forex" element={<Forex />} />
             <Route path="*" element={<>404</>} />
