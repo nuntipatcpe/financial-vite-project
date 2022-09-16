@@ -11,29 +11,30 @@ const Aside: React.FC<any> = ({ open, handleClose }: AsideProps) => {
   // const [toggle, setToggle] = React.useState(open);
   const [active, setActive] = React.useState("");
 
-  const hendleOpen = () => {
+  const hendleOpen = (str: string) => {
     handleClose();
+    setActive(str);
   };
 
   return (
     <div className={open ? "aside" : "aside hide"}>
       <div className="logo">
         <h2>Aside</h2>
-        <img src={Menu} alt="" onClick={hendleOpen} />
+        <img src={Menu} alt="" onClick={() => hendleOpen("")} />
       </div>
       <ul>
         <h3>Market</h3>
         <NavLink
           to="/futures"
           className={active === "Futures" ? "link-menu actice" : "link-menu"}
-          onClick={() => setActive("Futures")}
+          onClick={() => hendleOpen("Futures")}
         >
           Futures
         </NavLink>
         <NavLink
           to="/forex"
           className={active === "Forex" ? "link-menu actice" : "link-menu"}
-          onClick={() => setActive("Forex")}
+          onClick={() => hendleOpen("Forex")}
         >
           Forex
         </NavLink>

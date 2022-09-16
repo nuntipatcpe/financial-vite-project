@@ -3,6 +3,7 @@
   width: 500px;
   display: flex;
   flex-direction: column;
+  font-size: 1rem;
   .title {
     width: 100%;
     justify-content: left;
@@ -12,7 +13,7 @@
     padding: 5px 0;
   }
   form {
-    @include mixin.gird-col-3-no1(100px, 1fr, 100px);
+    @include mixin.gird-col-3-no1(6.25rem, 1fr, 6.25rem);
     width: 100%;
     gap: 20px;
     padding: 1rem 0;
@@ -72,29 +73,39 @@
 
 @media only screen and (max-width: 390px) {
   .futures {
-    width: calc(100vw - 10px);
-    // padding-left: 2rem;
-
-    .profit-Loss {
-      font-size: 10px;
-      margin: 0.5rem 1.5rem;
-      .card {
-        @include mixin.gird-col-3-no1(3rem, 1fr, 3rem);
-        margin: 0rem;
-        width: calc(85px + 1rem);
-      }
+    // width: calc(100vw - 10px);
+    width: 300px;
+    font-size: 14px;
+    form {
+      // width: 100px;
+      // width: 400;
+      gap: 10px;
+      @include mixin.gird-col-3-no1(4rem, 1fr, 4rem);
     }
+
     .card {
-      @include mixin.gird-col-3-no1(6.25rem, 1fr, 6.25rem);
+      @include mixin.gird-col-3-no1(4rem, 1fr, 4rem);
       margin: 1rem;
-      padding: 0.5rem 2rem;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      // gap: 1rem;
-      span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+      padding: 1rem 1rem;
+      gap: 0.5rem;
+    }
+    .title {
+      font-size: 24px;
+    }
+    .profit-Loss {
+      display: flex;
+      margin: 0rem 0rem;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .container-winrate {
+      @include mixin.gird-col-3-no1(1rem, 120px, 1rem);
+      width: 100%;
+    }
+    .slider-con {
+      // width: 100px;
     }
   }
 }

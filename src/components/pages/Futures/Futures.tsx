@@ -129,7 +129,7 @@ const Futures: React.FC<any> = () => {
         <span> market</span>
       </div>
       {/* box1___________________________________________________ */}
-      <form action="" className="risk-of-ruin">
+      <form action="">
         <label htmlFor="">Balance</label>
         <input
           type="text"
